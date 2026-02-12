@@ -11,7 +11,7 @@ export default function Button() {
         }}
         className="button"
       >
-        {count}
+        실제 값의 변화를 나타냅니다. {count}
       </button>
     </>
   );

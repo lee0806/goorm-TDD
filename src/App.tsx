@@ -1,11 +1,10 @@
 import "./App.css";
-import Button from "./components/Button";
+import Parent from "./components/parent/Parent";
 
 function App() {
   return (
     <>
-      <div>vite</div>
-      <Button />
+      <Parent />
     </>
   );
 }
