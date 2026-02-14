@@ -1,10 +1,12 @@
 import "./App.css";
-import Parent from "./components/parent/Parent";
+import Board from "./components/Board/Board";
+import Todo from "./pages/Todo";
 
 function App() {
   return (
     <>
-      <Parent />
+      {/* <Board /> */}
+      <Todo />
     </>
   );
 }
