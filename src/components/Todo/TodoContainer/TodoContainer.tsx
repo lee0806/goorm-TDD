@@ -1,6 +1,7 @@
 import React from "react";
 import "./TodoContainer.css";
 import TodoTopView from "../TodoTopView/TodoTopView";
+import TodoList from "../TodoList/TodoList";
 import TodoInput from "../TodoInput/TodoInput";
 
 export default function TodoContainer() {
@@ -12,6 +13,7 @@ export default function TodoContainer() {
         </header>
         <main className="todo-container-main">
           <TodoTopView />
+          <TodoList />
           <TodoInput />
         </main>
       </div>

@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import { useTodos } from "../../../hooks/useTodos";
+import { useTodoStore } from "../../../stores/useTodoStore";
 import "./TodoInput.css";
 
 export default function TodoInput() {
   const [inputVisible, setInputVisible] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  const { addTodo } = useTodos();
+
+  const addTodo = useTodoStore((state) => state.addTodo);
 
   const handleAddTodo = () => {
     if (inputValue.trim() !== "") {

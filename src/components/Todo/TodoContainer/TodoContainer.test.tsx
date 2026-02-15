@@ -12,6 +12,11 @@ describe("TodoContainer 테스트", () => {
     const topViewElement = screen.getByTestId("todo-topview");
     expect(topViewElement).toBeInTheDocument();
   });
+  it("TodoList가 랜더링 되어야 한다", () => {
+    render(<TodoContainer />);
+    const todoListElement = screen.getByTestId("todo-list");
+    expect(todoListElement).toBeInTheDocument();
+  });
   it("TodoInput이 랜더링 되어야 한다", () => {
     render(<TodoContainer />);
     const todoInputElement = screen.getByTestId("todo-input");
