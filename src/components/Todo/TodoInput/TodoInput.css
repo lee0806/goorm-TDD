@@ -1,10 +1,23 @@
 .todo-input-container {
   display: flex;
-  gap: 10px;
+  margin-top: 10px;
   justify-content: center;
+  width: 100%;
 }
 
 .todo-input-button {
   border: none;
-  background-color: #ceffb6;
+  border-radius: 10px;
+  background-color: rgba(206, 255, 182, 0.5);
+  font-size: 16px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.todo-input-button:hover {
+  background-color: rgba(206, 255, 182, 0.9);
+}
+
+.todo-input-button:active {
+  background-color: rgba(95, 186, 50, 0.9);
 }

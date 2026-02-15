@@ -1,11 +1,41 @@
 import React from "react";
+import { useState } from "react";
+import { useTodos } from "../../../hooks/useTodos";
 import "./TodoInput.css";
 
 export default function TodoInput() {
+  const [inputVisible, setInputVisible] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const { addTodo } = useTodos();
+
+  const handleAddTodo = () => {
+    if (inputValue.trim() !== "") {
+      addTodo(inputValue);
+      setInputValue("");
+      setInputVisible(false);
+    }
+  };
   return (
     <>
       <div data-testid="todo-input" className="todo-input-container">
-        <button className="todo-input-button">+ 할일 추가하기</button>
+        {!inputVisible ? (
+          <button
+            className="todo-input-button"
+            onClick={() => setInputVisible(true)}
+          >
+            + 할일 추가하기
+          </button>
+        ) : (
+          <>
+            <input
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+            />
+            <button onClick={handleAddTodo}>추가</button>
+            <button onClick={() => setInputVisible(false)}>취소</button>
+          </>
+        )}
       </div>
     </>
   );
