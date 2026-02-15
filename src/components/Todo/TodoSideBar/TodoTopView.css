@@ -1,0 +1,12 @@
+.topview-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 400px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

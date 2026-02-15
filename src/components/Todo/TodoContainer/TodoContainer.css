@@ -1,0 +1,16 @@
+.todo-container {
+  display: flex;
+  border: 1px solid #a0a0a0;
+  border-radius: 20px;
+  max-width: 1000px;
+  height: fit-content;
+  margin: 20px;
+  padding: 20px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todo-header-describe {
+  font-size: 16px;
+  color: #404040;
+}
