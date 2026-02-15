@@ -1,0 +1,32 @@
+.topview-list {
+  display: flex;
+
+  justify-content: space-between;
+  width: 400px;
+}
+
+.topview-button-all,
+.topview-button-progress,
+.topview-button-complete {
+  border: none;
+  border-bottom: 1px solid #a0a0a0;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+.topview-button-all {
+  color: black;
+}
+
+.active {
+  border-bottom: 2px solid black;
+}
+
+.topview-button-progress {
+  color: black;
+}
+
+.topview-button-complete {
+  color: black;
+}

@@ -1,0 +1,10 @@
+.todo-input-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.todo-input-button {
+  border: none;
+  background-color: #ceffb6;
+}

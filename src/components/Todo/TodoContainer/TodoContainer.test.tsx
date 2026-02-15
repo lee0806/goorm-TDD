@@ -12,4 +12,9 @@ describe("TodoContainer 테스트", () => {
     const topViewElement = screen.getByTestId("todo-topview");
     expect(topViewElement).toBeInTheDocument();
   });
+  it("TodoInput이 랜더링 되어야 한다", () => {
+    render(<TodoContainer />);
+    const todoInputElement = screen.getByTestId("todo-input");
+    expect(todoInputElement).toBeInTheDocument();
+  });
 });

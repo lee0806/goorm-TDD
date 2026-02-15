@@ -9,8 +9,3 @@
   flex-direction: column;
   gap: 20px;
 }
-
-.todo-header-describe {
-  font-size: 16px;
-  color: #404040;
-}
