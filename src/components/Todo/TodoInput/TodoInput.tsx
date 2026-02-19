@@ -32,9 +32,11 @@ export default function TodoInput() {
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
+              className="todo-input-text"
+              placeholder="할일을 입력해주세요."
             />
-            <button onClick={handleAddTodo}>추가</button>
-            <button onClick={() => setInputVisible(false)}>취소</button>
+            <button className="todo-input-add-button" onClick={handleAddTodo}>추가</button>
+            <button className="todo-input-cancel-button" onClick={() => setInputVisible(false)}>취소</button>
           </>
         )}
       </div>

@@ -1,23 +1,113 @@
+/* 컨테이너 */
 .todo-input-container {
   display: flex;
   margin-top: 10px;
   justify-content: center;
   width: 100%;
+  gap: 8px; 
+  align-items: center; 
 }
 
+/* ===== 할일 추가 버튼 (초기 상태) ===== */
 .todo-input-button {
   border: none;
-  border-radius: 10px;
-  background-color: rgba(206, 255, 182, 0.5);
-  font-size: 16px;
-  padding: 10px 20px;
+  border-radius: 12px; 
+  background: #a8e063;
+  font-size: 15px;
+  font-weight: 600; 
+  padding: 14px 24px; 
   width: 100%;
+  color: white; 
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+  box-shadow: 0 2px 8px rgba(86, 171, 47, 0.2); 
 }
 
+/* 할일 추가 버튼 호버 효과 */
 .todo-input-button:hover {
-  background-color: rgba(206, 255, 182, 0.9);
+  background: #67bc3f;
+  transform: translateY(-1px); 
 }
 
+/* 할일 추가 버튼 클릭 효과 */
 .todo-input-button:active {
-  background-color: rgba(95, 186, 50, 0.9);
+  background: #3d7a21;
+  transform: translateY(0); 
+}
+
+/* ===== 텍스트 입력 필드 ===== */
+.todo-input-text {
+  flex: 1; 
+  padding: 14px 18px; 
+  border: 2px solid #e8e8e8; 
+  border-radius: 12px; 
+  font-size: 15px;
+  font-weight: 500;
+  color: #333; 
+  background: #fff; 
+  outline: none; 
+  transition: all 0.2s ease; 
+}
+
+/* 입력 필드 포커스 효과 */
+.todo-input-text:focus {
+  border-color: #667eea; 
+}
+
+/* 입력 필드 placeholder 스타일 */
+.todo-input-text::placeholder {
+  color: #aaa; 
+  font-weight: 400;
+}
+
+/* ===== 추가/취소 버튼 (입력 중 상태) ===== */
+.todo-input-add-button, .todo-input-cancel-button {
+  padding: 14px 20px; /* 버튼 패딩 */
+  border: none;
+  border-radius: 10px; /* 모서리 둥글게 */
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease; /* 부드러운 전환 */
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+  letter-spacing: -0.3px;
+  min-width: 70px; /* 최소 너비 */
+}
+
+/* 추가 버튼 스타일 */
+.todo-input-add-button {
+  background: #667eea;
+  color: white;
+}
+
+/* 추가 버튼 호버 효과 */
+.todo-input-add-button:hover {
+  background: #7c8eef;
+  transform: translateY(-1px); 
+}
+
+/* 추가 버튼 클릭 효과 */
+.todo-input-add-button:active {
+  transform: translateY(0); 
+}
+
+/* 취소 버튼 스타일 */
+.todo-input-cancel-button {
+  background: #fff; 
+  color: #666; 
+  border: 2px solid #e8e8e8; 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+
+.todo-input-cancel-button:hover {
+  background: #f8f8f8; 
+  border-color: #ddd; 
+  transform: translateY(-1px);
+}
+
+
+.todo-input-cancel-button:active {
+  transform: translateY(0);
+  background: #f0f0f0;
 }
