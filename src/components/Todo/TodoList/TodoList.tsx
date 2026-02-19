@@ -39,9 +39,9 @@ export default function TodoList() {
                   }`}
                 >
                   <input
-                    onClick={() => handleToggleTodo(todo.id)}
+                    onChange={() => handleToggleTodo(todo.id)}
                     className="todo-list-toggle-btn"
-                    type="radio"
+                    type="checkbox"
                     checked={todo.completed}
                   ></input>
                   {todo.text}
