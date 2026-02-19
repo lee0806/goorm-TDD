@@ -1,0 +1,123 @@
+/* 리스트 디자인 초기화 */
+.todo-list-ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* 비어 있을 때 */
+.todo-list-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #aaa;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.3px; /* 글자 간격 조정 */
+}
+
+/* 리스트 하나의 디자인 */
+.todo-list-li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px 20px;
+  margin-bottom: 8px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.2s ease; /* hover 시 동작되는 애니메이션 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* hover 시 */
+.todo-list-li:hover {
+  border-color: #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px); /* y방향으로 떠오르는 애니메이션 */
+}
+
+/* 일정 완료 버튼 */
+.todo-list-toggle-btn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid #d0d0d0;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+/* 호버 시 */
+.todo-list-toggle-btn:hover {
+  border-color: #4a90e2;
+  transform: scale(1.1);
+}
+
+/* 체크 되었을 때 */
+.todo-list-toggle-btn:checked {
+  background: #667eea;
+  border-color: #667eea;
+}
+
+/* 체크 된 뒤 */
+.todo-list-toggle-btn:checked::after {
+  content: "✓"; /* 체크 표시 */
+  position: absolute; /* 체크 위치 */
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 중앙에 위치 */
+}
+
+/* 리스트의 텍스트 */
+.todo-list-text {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  color: #333;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  line-height: 1.5;
+}
+
+/* 완료 되었을 때 */
+.todo-list-text.completed {
+  color: #999;
+}
+
+/* 삭제 버튼 */
+.todo-list-delete-btn {
+  padding: 8px 16px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  color: #666;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+/* 삭제 버튼 호버 시 */
+.todo-list-delete-btn:hover {
+  background: #ff6b6b;
+  border-color: #ff6b6b;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* 클릭 시 */
+.todo-list-delete-btn:active {
+  transform: scale(0.98);
+}
