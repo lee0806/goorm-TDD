@@ -9,12 +9,17 @@ export interface Todo {
   completed: boolean;
 }
 
+// Filter 타입
+export type FilterType = "all" | "progress" | "completed";
+
 // TodoStore의 타입을 정의
 interface TodoStore {
   todos: Todo[];
+  filter: FilterType;
   addTodo: (text: string) => void;
   toggleTodo: (id: number) => void;
   deleteTodo: (id: number) => void;
+  setFilter: (filter: FilterType) => void;
 }
 
 // TodoStore를 생성
@@ -24,7 +29,7 @@ export const useTodoStore = create<TodoStore>()(
     // 상태 변경 함수
     (set) => ({
       todos: [], // 초기엔 빈 배열
-
+      filter: "all", // 초기엔 전체 보기
       addTodo: (
         text, // 할일을 추가하는 함수로
       ) =>
@@ -60,6 +65,13 @@ export const useTodoStore = create<TodoStore>()(
         set((state) => ({
           // 현재 상태를 가져온 뒤
           todos: state.todos.filter((todo) => todo.id !== id), // 할일 목록을 순회하는데, 다른 id값만 저장한다.
+        })),
+
+      setFilter: (
+        filter, // 필터를 입력받아
+      ) =>
+        set(() => ({
+          filter, // 상태를 변경
         })),
     }),
     {
