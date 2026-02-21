@@ -5,7 +5,7 @@ import "./App.css";
 // import EmotionButton from "./components/StyleButton/EmotionButton";
 // import Todo from "./pages/Todo";
 // import TodoContainer from "./components/Todo/TodoContainer/TodoContainer";
-import OrderProduct from "./pages/orderProduct";
+import OrderProduct from "./pages/OrderProduct";
 
 function App() {
   return (
