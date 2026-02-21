@@ -1,0 +1,17 @@
+.order-product-title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-product-title-title {
+  justify-content: start;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.order-product-title-subtitle {
+  font-size: 16px;
+  color: #666;
+}

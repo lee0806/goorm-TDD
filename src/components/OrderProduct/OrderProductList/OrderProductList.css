@@ -1,0 +1,29 @@
+.order-product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-product-list-item {
+  display: flex;
+  gap: 10px;
+}
+
+.order-product-list-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.order-product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.order-product-list-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 20px;
+}

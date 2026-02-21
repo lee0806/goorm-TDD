@@ -1,0 +1,7 @@
+.order-product-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 20px;
+}
+
