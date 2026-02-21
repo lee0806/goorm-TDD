@@ -1,8 +1,10 @@
 import React from "react";
 import "./OrderProductList.css";
 import { food } from "../Food/Food";
+import { useCartStore } from "../../stores/useCartStore";
 
 export default function OrderProductList() {
+  const 
   return (
     <>
       <div className="order-product-list">
@@ -18,6 +20,10 @@ export default function OrderProductList() {
               <div className="order-product-list-item-title">{item.name}</div>
               <div>{item.category}</div>
               <div>{item.price.toLocaleString()}원</div>
+            </div>
+            <div className="order-product-count">
+              <div>-</div>
+              <div></div>
             </div>
           </div>
         ))}
