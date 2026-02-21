@@ -1,10 +1,12 @@
 import React from "react";
 import "./OrderProductList.css";
 import { food } from "../Food/Food";
-import { useCartStore } from "../../stores/useCartStore";
+import { useCartStore } from "../../../stores/useCartStore";
 
 export default function OrderProductList() {
-  const 
+  const addItem = useCartStore((state) => state.addItem); // 상품 갯수 추가
+  const minusItem = useCartStore((state) => state.minusItem); // 상품 갯수 빼기
+  const cart = useCartStore((state) => state.cart); // 상품 자체
   return (
     <>
       <div className="order-product-list">
@@ -21,9 +23,10 @@ export default function OrderProductList() {
               <div>{item.category}</div>
               <div>{item.price.toLocaleString()}원</div>
             </div>
-            <div className="order-product-count">
-              <div>-</div>
-              <div></div>
+            <div className="order-product-count-counter">
+              <div onClick={() => minusItem(item.id)}>-</div>
+              <div>{cart[item.id] || 0}</div>
+              <div onClick={() => addItem(item.id)}>+</div>
             </div>
           </div>
         ))}

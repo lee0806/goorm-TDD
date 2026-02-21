@@ -16,11 +16,11 @@ interface CartStore {
   getTotalCount: () => number;
 }
 
-export const useCartStore = create<CartStore>((set, get) => ({
+export const useCartStore = create<CartStore>()((set, get) => ({
   cart: {},
 
   addItem: (id) => {
-    set((state) => {
+    set((state: CartStore) => {
       const newCart = { ...state.cart };
       const currentCount = newCart[id] || 0;
       newCart[id] = currentCount + 1;
@@ -29,7 +29,7 @@ export const useCartStore = create<CartStore>((set, get) => ({
   },
 
   minusItem: (id) => {
-    set((state) => {
+    set((state: CartStore) => {
       const newCart = {...state.cart };
       const currentCount = newCart[id] || 0;
       if (currentCount > 0) {
