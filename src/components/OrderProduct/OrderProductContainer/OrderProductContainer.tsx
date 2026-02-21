@@ -1,6 +1,7 @@
 import React from "react";
 import "./OrderProductContainer.css";
 import OrderProductTitle from "../OrderProductTitle/OrderProductTitle";
+import OrderProductSearchBar from "../OrderProductSearchBar/OrderProductSearchBar";
 import OrderProductList from "../OrderProductList/OrderProductList";
 
 export default function OrderProductContainer() {
@@ -13,6 +14,7 @@ export default function OrderProductContainer() {
         <OrderProductTitle />
       </section>
       <section aria-label="order-product-list">
+        <OrderProductSearchBar />
         <OrderProductList />
       </section>
     </>
