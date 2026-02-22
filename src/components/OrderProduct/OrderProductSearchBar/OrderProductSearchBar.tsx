@@ -1,8 +1,10 @@
 import React from "react";
 import "./OrderProductSearchBar.css";
-import { useState } from "react";
+import { useSearchStore } from "../../../stores/useSearchStore";
 
 export default function OrderProductSearchBar() {
+  const { searchValue, setSearchValue } = useSearchStore();
+
   return (
     <>
       <div className="">
@@ -11,6 +13,8 @@ export default function OrderProductSearchBar() {
             type="text"
             placeholder="검색어를 입력해주세요."
             className="order-product-search-input"
+            value={searchValue}
+            onChange={(e) => setSearchValue(e.target.value)}
           />
           <button className="order-product-search-click" aria-label="검색 버튼">
             <svg
