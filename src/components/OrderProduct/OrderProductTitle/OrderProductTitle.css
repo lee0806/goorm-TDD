@@ -5,10 +5,10 @@
 }
 
 .order-product-title-title {
-  justify-content: start;
-  align-items: center;
   font-size: 25px;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
 }
 
 .order-product-title-subtitle {
